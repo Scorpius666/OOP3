@@ -4,7 +4,6 @@ D:\Codeing\OOP3\OOP3-1\bin\Debug\netcoreapp3.1\OOP3-1.runtimeconfig.json
 D:\Codeing\OOP3\OOP3-1\bin\Debug\netcoreapp3.1\OOP3-1.runtimeconfig.dev.json
 D:\Codeing\OOP3\OOP3-1\bin\Debug\netcoreapp3.1\OOP3-1.dll
 D:\Codeing\OOP3\OOP3-1\bin\Debug\netcoreapp3.1\OOP3-1.pdb
-D:\Codeing\OOP3\OOP3-1\obj\Debug\netcoreapp3.1\OOP3-1.csprojAssemblyReference.cache
 D:\Codeing\OOP3\OOP3-1\obj\Debug\netcoreapp3.1\OOP3-1.AssemblyInfoInputs.cache
 D:\Codeing\OOP3\OOP3-1\obj\Debug\netcoreapp3.1\OOP3-1.AssemblyInfo.cs
 D:\Codeing\OOP3\OOP3-1\obj\Debug\netcoreapp3.1\OOP3-1.csproj.CoreCompileInputs.cache
