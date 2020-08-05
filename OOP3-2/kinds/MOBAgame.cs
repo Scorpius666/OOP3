@@ -4,7 +4,8 @@ using System.Text;
 
 namespace OOP3_2.kinds
 {
-    class MOBAgame
+    class MOBAgame : Game
     {
+
     }
 }

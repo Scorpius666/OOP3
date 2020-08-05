@@ -4,9 +4,13 @@ using System.Text;
 
 namespace OOP3_2
 {
-    class Game
+    class Game :IRelax
     {
-        private char Name;
+        private string Name;
 
+        public void Relax()
+        {
+            Console.Write("Now you are relaxed.");
+        }
     }
 }

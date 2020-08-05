@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OOP3_2.kinds
+namespace OOP3_2
 {
-    class FPSgmae : Game
+    interface IOnline
     {
+        void PlayOnline();
     }
 }
