@@ -4,8 +4,9 @@ using System.Text;
 
 namespace OOP3_2.gamer
 {
-    interface IPlay:IGamecheck
+    interface IGamecheck
     {
-        void Play();
+        void Gamecheck();
+        string[] Gamefeedback();
     }
 }

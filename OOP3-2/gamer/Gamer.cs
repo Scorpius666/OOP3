@@ -1,52 +1,72 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using OOP3_2.gamer.@interface;
+using System;
 
 namespace OOP3_2.gamer
 {
-    class Gamer : IGamercheck,IPlay,IWork
+    class Gamer : IFeelingcheck, IGamecheck, IPlay, IWork, IName, IBorn, IGamercheck
     {
         private string Name;
         private int Money;
         private int Feeling;
-        private string[] Owngame;
+        private string[] Owngame = new string[5];
 
         public void Feelingcheck()
         {
-            
             if(Feeling<=0)
             {
                 Console.WriteLine("Your charater is dead. Game is over.");   
                 System.Environment.Exit(0);
             }
-
         }
 
-        public void GameCheck()
+        public int Feelingfeedback()
         {
-            int i = Owngame.Length.Toint()  ;
+            return Feeling;
+        }
 
-            if ( != 0)
+        public void Gamecheck()
+        {
+            string i = Owngame.Length.ToString();
+            int j = int.Parse(i);
+            if(j==0)
+            {
+                Console.WriteLine("Sorry you has not own any games.");//应考虑无游戏时如何退回主程序
+            }
+        }
+
+        public string[] Gamefeedback()
+        {
+            return Owngame;
         }
 
         public void Play()
         {
-            throw new NotImplementedException();
+            Feeling += 10;
         }
 
         public void Work()
         {
-            throw new NotImplementedException();
+            Money += 40;
+            Feeling -= 10;
         }
 
-        void IGamercheck.Feelingcheck()
+        public void Nameing(string name)
         {
-            throw new NotImplementedException();
+            Name = name;
         }
 
-        void IPlay.GameCheck()
+        public void Born()
         {
-            throw new NotImplementedException();
+            Money = 0;
+            Feeling = 20;
+            Owngame[0]= {"nogame"};
+        }
+
+        public void Gamercheck()
+        {
+            Console.WriteLine("{0} your charater has be created", Name);
+            Console.WriteLine("Now your feeling is {0}", Feeling);
+            Console.WriteLine("Now your the game you own is {0}", Owngame[0]);
         }
     }
 }

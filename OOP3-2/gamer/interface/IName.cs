@@ -4,8 +4,8 @@ using System.Text;
 
 namespace OOP3_2.gamer.@interface
 {
-    interface IGamercheck:IFeelingcheck, IGamecheck
+    interface IName
     {
-        void Gamercheck();
+        void Nameing(string name);
     }
 }
