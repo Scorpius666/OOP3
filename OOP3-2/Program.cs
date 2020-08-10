@@ -1,5 +1,6 @@
 ﻿using OOP3_2.gamer;
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace OOP3_2
 {
@@ -16,6 +17,11 @@ namespace OOP3_2
             gamer1.Born();
             gamer1.Nameing(name);
             gamer1.Gamercheck();
+            gamer1.Choice();
+             
+            
         }
+       
+
     }
 }

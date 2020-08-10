@@ -1,14 +1,16 @@
 ﻿using OOP3_2.gamer.@interface;
+using OOP3_2.@interface;
 using System;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace OOP3_2.gamer
 {
-    class Gamer : IFeelingcheck, IGamecheck, IPlay, IWork, IName, IBorn, IGamercheck
+    class Gamer : IFeelingcheck, IGamecheck, IPlay, IWork, IName, IBorn, IGamercheck, IChoice, IBuy
     {
         private string Name;
         private int Money;
         private int Feeling;
-        private string[] Owngame = new string[5];
+        private string Owngame;
 
         public void Feelingcheck()
         {
@@ -34,11 +36,6 @@ namespace OOP3_2.gamer
             }
         }
 
-        public string[] Gamefeedback()
-        {
-            return Owngame;
-        }
-
         public void Play()
         {
             Feeling += 10;
@@ -59,14 +56,47 @@ namespace OOP3_2.gamer
         {
             Money = 0;
             Feeling = 20;
-            Owngame[0]= {"nogame"};
+            Owngame = "Game Null";
         }
 
         public void Gamercheck()
         {
             Console.WriteLine("{0} your charater has be created", Name);
             Console.WriteLine("Now your feeling is {0}", Feeling);
-            Console.WriteLine("Now your the game you own is {0}", Owngame[0]);
+            Console.WriteLine("Now your the game you own is {0}", Owngame);
+        }
+
+        public void Choice()
+        {
+            {
+                Console.WriteLine("What are you want to do: ");
+                Console.WriteLine("[A]Check my status");
+                Console.WriteLine("[B]To work");
+                Console.WriteLine("[C]To play game");
+                Console.WriteLine("[D]To buy game");
+                Console.WriteLine("[E]Exit");
+                var y = Console.ReadLine();
+                char x = y[0];
+                switch (x)
+                {
+                    case 'a':
+                    case 'A': Gamercheck(); break;
+                    case 'b':
+                    case 'B': Work(); break;
+                    case 'c':
+                    case 'C': Play(); break;
+                    case 'd':
+                    case 'D': Buy();  break;
+                    case 'e':
+                    case 'E': System.Environment.Exit(0); break;
+                }
+            }
+        }
+
+        public void Buy()
+        {
+            Console.WriteLine("Which game you want buy");
+            Console.WriteLine("[B]To work");
         }
     }
 }
